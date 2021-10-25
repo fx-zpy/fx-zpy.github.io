@@ -156,13 +156,6 @@
   </url>
   
   <url>
-    <loc>http://fx-zpy.github.io/List/tools/index.html</loc>
-    
-    <lastmod>2021-06-13</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://fx-zpy.github.io/List/music/index.html</loc>
     
     <lastmod>2021-06-13</lastmod>
@@ -170,7 +163,7 @@
   </url>
   
   <url>
-    <loc>http://fx-zpy.github.io/List/galleries/%E4%BA%8C%E6%AC%A1%E5%85%83%E9%A3%8E/index.html</loc>
+    <loc>http://fx-zpy.github.io/List/tools/index.html</loc>
     
     <lastmod>2021-06-13</lastmod>
     
@@ -191,7 +184,7 @@
   </url>
   
   <url>
-    <loc>http://fx-zpy.github.io/List/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/index.html</loc>
+    <loc>http://fx-zpy.github.io/List/galleries/%E4%BA%8C%E6%AC%A1%E5%85%83%E9%A3%8E/index.html</loc>
     
     <lastmod>2021-06-13</lastmod>
     
@@ -205,7 +198,21 @@
   </url>
   
   <url>
+    <loc>http://fx-zpy.github.io/List/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/index.html</loc>
+    
+    <lastmod>2021-06-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://fx-zpy.github.io/List/galleries/%E5%91%86%E8%90%8C%E7%8C%AB%E5%92%AA/index.html</loc>
+    
+    <lastmod>2021-06-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fx-zpy.github.io/List/galleries/%E6%B8%85%E6%96%B0%E8%8A%B1%E5%8D%89/index.html</loc>
     
     <lastmod>2021-06-13</lastmod>
     
@@ -233,7 +240,7 @@
   </url>
   
   <url>
-    <loc>http://fx-zpy.github.io/List/galleries/%E6%B8%85%E6%96%B0%E8%8A%B1%E5%8D%89/index.html</loc>
+    <loc>http://fx-zpy.github.io/List/galleries/%E7%94%9C%E7%BE%8E%E9%A3%9F%E5%93%81/index.html</loc>
     
     <lastmod>2021-06-13</lastmod>
     
@@ -241,13 +248,6 @@
   
   <url>
     <loc>http://fx-zpy.github.io/List/galleries/%E8%87%AA%E7%84%B6%E9%A3%8E%E6%99%AF/index.html</loc>
-    
-    <lastmod>2021-06-13</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fx-zpy.github.io/List/galleries/%E7%94%9C%E7%BE%8E%E9%A3%9F%E5%93%81/index.html</loc>
     
     <lastmod>2021-06-13</lastmod>
     
@@ -291,6 +291,27 @@
   </url>
   
   <url>
+    <loc>http://fx-zpy.github.io/tags/electron/</loc>
+    <lastmod>2021-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://fx-zpy.github.io/tags/HTML/</loc>
+    <lastmod>2021-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://fx-zpy.github.io/tags/JS/</loc>
+    <lastmod>2021-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://fx-zpy.github.io/tags/LeetCode/</loc>
     <lastmod>2021-10-25</lastmod>
     <changefreq>daily</changefreq>
@@ -318,27 +339,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>http://fx-zpy.github.io/tags/electron/</loc>
-    <lastmod>2021-10-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://fx-zpy.github.io/tags/HTML/</loc>
-    <lastmod>2021-10-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://fx-zpy.github.io/tags/JS/</loc>
-    <lastmod>2021-10-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   
   <url>
@@ -356,14 +356,14 @@
   </url>
   
   <url>
-    <loc>http://fx-zpy.github.io/categories/CTF/</loc>
+    <loc>http://fx-zpy.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2021-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://fx-zpy.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>http://fx-zpy.github.io/categories/CTF/</loc>
     <lastmod>2021-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
