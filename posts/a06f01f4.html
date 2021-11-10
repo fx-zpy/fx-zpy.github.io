@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="资源分享, 计算机 网络安全 渗透测试 前后端">
+    <meta name="keywords" content="计算机网络知识总结（二）, 计算机 网络安全 渗透测试 前后端">
     <meta name="description" content="本科 | 前后端 | 网络安全">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>资源分享 | 无言</title>
+    <title>计算机网络知识总结（二） | 无言</title>
 
     <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/blog/tx.jpg">
 
@@ -457,12 +457,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928014621.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/blog/9.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">资源分享</h1>
+                    <h1 class="description center-align post-title">计算机网络知识总结（二）</h1>
                 </div>
             </div>
         </div>
@@ -581,12 +581,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%AE%A1%E7%BD%91/">
+                                <span class="chip bg-color">计网</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                计算机网络
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -595,28 +608,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-19
+                    2021-11-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-13
+                    2021-11-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    14 分
                 </div>
                 
 
@@ -634,7 +647,419 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="二、应用层"><a href="#二、应用层" class="headerlink" title="二、应用层"></a>二、应用层</h1><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol>
+<li><p>网络应用的架构有三种：C/S模型（客户端/服务器）、对等网（Peer-to-Peer，P2P）、混合体系（C/S+P2P)</p>
+<ul>
+<li><code>C/S</code>:服务器总是打开拥有一个固定的地址并且是一个缩放的数据中心，客户端可以和服务器通信，但不能与客户端通信，且通信可能是间歇性的，客户端拥有动态的IP地址</li>
+<li><code>P2P</code>：客户端之间是对等的，可以通信，提供服务也享受服务，结点之间的连接是间歇性的地址也是变化的</li>
+</ul>
+</li>
+<li><p>网络应用进程使用<code>套接字</code>来唯一确定</p>
+</li>
+<li><p>套接字包含主机地址和端口号</p>
+<ul>
+<li>主机地址：标识该网络应用进程运行在网上哪一台主机上，通常使用<code>32位</code>的ip地址来进行标识。</li>
+<li>端口地址：在该主机上标识该网络应用进程，通常使用<code>16位</code>的端口号来进行标识</li>
+</ul>
+</li>
+<li><p>运输层传输协议主要有两个：TCP和UDP</p>
+<ul>
+<li>TCP<ul>
+<li>面向连接：在客户端和服务器端进程之间需要进行连接</li>
+<li>可靠传输：在发送和接受进程之间</li>
+<li>流量控制：发送数据的速度不会超过接受的速度</li>
+<li>拥塞控制：当网络超负荷时，减缓发送速度</li>
+<li>目前缺陷：不提供最小带宽承诺和实时性传输</li>
+</ul>
+</li>
+<li>UDP<ul>
+<li>不可靠的数据传输</li>
+<li>不需要建立连接</li>
+<li>没有流量控制和拥塞控制</li>
+<li>不提供实时传输和最小带宽承诺</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>应用层协议</p>
+<ul>
+<li><p>HTTP</p>
+<ul>
+<li><p>无状态的：服务器不保留任何访问过的请求信息</p>
+<blockquote>
+<p>保留过去的请求信息会造成隐患，如果浏览器或者服务器崩溃那么各自的状态视图就会发生分歧，需要重新核对</p>
+</blockquote>
+</li>
+<li><p>HTTP采用TCP来作为运输协议步骤如下</p>
+<ol>
+<li>客户端启动TCP连接（创建套接字）到服务器，<code>端口80</code></li>
+<li>服务器接受来自客户端的TCP连接</li>
+<li>http报文（应用层协议报文）在浏览器和web服务器之间进行交换</li>
+<li>关闭TCP连接</li>
+</ol>
+</li>
+<li><p>HTTP传输模式</p>
+<ul>
+<li><strong>1.0—非持久连接</strong>：每个TCP连接仅仅传输一个请求报文和响应报文，即每个TCP连接在浏览器发送一个对象之后就会关闭，不会持续连接</li>
+<li><strong>1.1—持久连接</strong>：服务器发送响应报文以后，TCP连接不会立即断开，继续保持这连接状态，知道长时间没有对象的运输才进行断开，减少了对服务器的套接字的占用，提高了服务器的负载能力<ul>
+<li>非流水线方式：一个对象传输完成才能传输下一个对象</li>
+<li>流水线方式：一次性的发送所有的请求，慢慢接受</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>一般的HTTP请求报文格式</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/http.png" alt="一般格式"></p>
+</li>
+<li><p>典型的HTTP请求报文格式</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/http0.png" alt="具体报文"></p>
+</li>
+<li><p>HTTP请求行支持的方法</p>
+<ul>
+<li><p>GET（1.0/1.1）：向服务器请求指定的URL的对象</p>
+</li>
+<li><p>POST（1.0/1.1）：用于向服务器提交表单数据也可以请求一个web页面</p>
+<blockquote>
+<p>可以不使用POST方法而使用GET方法发送表单数据来获取新的WEB页面，例如搜索引擎</p>
+</blockquote>
+</li>
+<li><p>HEAD（1.0/1.1）：请求服务器返回一个响应报文，但是报文中不包含请求对象，该方法常常用来进行故障追踪</p>
+</li>
+<li><p>PUT（1.1）：上传的文件放在实体主体字段中，目标路径由URL字段标明</p>
+</li>
+<li><p>DELETE（1.1）：删除URL字段中指定的文件</p>
+</li>
+</ul>
+</li>
+<li><p>HTTP响应报文的一般格式</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/httpup.png" alt="响应报文一般格式"></p>
+</li>
+<li><p>HTTP响应报文具体例子</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/httpup0.png" alt="具体例子"></p>
+</li>
+<li><p>常见的HTTP响应状态码和短语</p>
+<ul>
+<li>200—OK：请求成功，被请求的对象在报文中</li>
+<li>301—Moved Permanently：被请求的对象移动过，新的位置在报文中有说明</li>
+<li>400—Bad Request：服务器不懂请求报文</li>
+<li>404—Not Found：服务器上找不到请求对象，<del>色情网站经常这样</del></li>
+<li>505—HTTP Version Not Supported:服务器不支持请求报文使用的HTTP协议版本</li>
+</ul>
+</li>
+<li><p>Cookie</p>
+<ul>
+<li><p>web站点为什么使用cookie</p>
+<ol>
+<li>限制用户的访问</li>
+<li>把内容和用户的身份关联起来</li>
+</ol>
+</li>
+<li><p>cookie技术的组成部分</p>
+<ul>
+<li>HTTP请求和响应报文里面各有一个cookie的首部行</li>
+<li>用户的端系统上保留了一个cookie文件，由浏览器负责管理</li>
+<li>web站点有一个后端数据库</li>
+</ul>
+</li>
+<li><p>cookie工作流程</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/cookie.png"></p>
+</li>
+<li><p>cookie和私密性</p>
+<ul>
+<li>cookie允许网站获取用户的信息包括用户在一些站点用于登录的个人信息</li>
+<li>搜索引擎可以通过cookie和重定向技术获取更多的信息</li>
+<li>其他广告公司也能从中获取用户的信息</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>SMTP</p>
+<ul>
+<li><p>全称简单邮件传输协议，使用TCP可靠的传送邮件报文，<code>端口为25</code></p>
+</li>
+<li><p>直接传输</p>
+</li>
+<li><p>传输的三个阶段</p>
+<ul>
+<li>握手（打招呼）</li>
+<li>报文传输</li>
+<li>结束</li>
+</ul>
+</li>
+<li><p>命令：ASCll文本</p>
+</li>
+<li><p>响应：状态码和状态短语</p>
+<blockquote>
+<p>邮件报文必须使用7-bit ASCll表示，非ASCll也可以使用MIME扩展来实现转换</p>
+</blockquote>
+</li>
+<li><p>非ASCll的MIME扩展</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/MIME.png"></p>
+</li>
+<li><p>MIME和SMTP的关系</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/smtp.png"></p>
+</li>
+<li><p>邮件访问协议：邮件已经传送到目的服务器上了，接收方通过邮件访问协议来读取邮件</p>
+<ul>
+<li><p>POP3（第三版的邮局协议）</p>
+<ol>
+<li><p>特许阶段：用户代理发送用户名和口令（明文）来鉴别用户</p>
+</li>
+<li><p>事务处理阶段：用户代理取回报文，并且可以对报文做删除标记或者删除这些标记</p>
+</li>
+<li><p>更新阶段：客户发出quit命令之后，删除第二步被标记为删除的报文，然后结束POP3会话</p>
+<blockquote>
+<p>POP3会话没有状态，用户也无法在邮件服务器上对自己的邮件进行重组织，只能将邮件先下载到本地再进行重组织</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>IMAP（因特网邮件访问协议）</p>
+<ul>
+<li>将所有的邮件都保存在服务器上</li>
+<li>允许用户在服务器上组织自己的邮件目录</li>
+<li>维护了IMAP会话的用户信息：目录名和报文ID与目录名之间的映射关系</li>
+</ul>
+</li>
+<li><p>HTTP：基于web的电子邮件在浏览器和邮件服务器之间传输使用的是HTTP协议，但是邮件服务器之间的传输依旧是SMTP</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="6">
+<li><p>DNS：用于IP地址和域名之间的转换</p>
+<ul>
+<li><p>DNS是一个分布式的数据库，由很多台DNS服务器按照层次结构组织起来</p>
+</li>
+<li><p>DNS运行在端到端系统上，且使用的是UDP协议（53号端口）进行报文传输，<strong>因此DNS是应用层协议</strong></p>
+</li>
+<li><p>以C/S模式工作</p>
+</li>
+<li><p>DNS解析过程例子</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/dns.png"></p>
+</li>
+<li><p>DNS实现</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/dnssx.png"></p>
+<hr>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="三、运输层"><a href="#三、运输层" class="headerlink" title="三、运输层"></a>三、运输层</h1><h2 id="知识点总结"><a href="#知识点总结" class="headerlink" title="知识点总结"></a>知识点总结</h2><ol>
+<li><p>运输层为不同主机上运行的应用进程之间提供逻辑通信</p>
+</li>
+<li><p>运输层协议发送方将应用数据划分成报文段，交给网络层，接受方把报文段重组成应用数据，交付给应用层</p>
+</li>
+<li><p><strong>网络层是不同主机的通信，而运输层是应用进程之间的通信</strong></p>
+</li>
+<li><p>多路复用和多路分解</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/dlfy.png"></p>
+</li>
+<li><p>使用UDP套接字的时候，数据报中需要指定<code>目的IP地址和目的端口</code>，使用TCP套接字的时候，则还需要指定<code>源IP地址和源端口号</code></p>
+</li>
+<li><p>UDP</p>
+<ul>
+<li><p>发送方</p>
+<ol>
+<li>从应用进程得到数据</li>
+<li>附加上多路分解和复用所需的源和目的端口号以及差错检测信息，形成报文段</li>
+<li>递交给网络层，尽力的传送给接收方的主机（我发了，收不收的到得看人品）</li>
+</ol>
+</li>
+<li><p>接收方</p>
+<ol>
+<li><p>从网络层接受报文段（数据报）</p>
+</li>
+<li><p>根据目的端口号，将数据交付给相应的应用进程</p>
+<blockquote>
+<p>UDP通信不需要握手，是无连接的，而且无需维护连接状态，段首部开销比TCP小，TCP20字节，UDP只需要8个字节，而且无拥塞控制，可以按需随时发送</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>UDP的校验和=报文段的所有16比特字的和再进行反码转换，接收方将所有16比特字和校验和相加，结果如果不是全1，说明有错误，是全1，也有可能出错。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/jyh.png"></p>
+</li>
+<li><p>Rdt1.0:经完全可靠信道的可靠数据传输（底层信号非常可靠，无比特差错，无分组丢失）</p>
+</li>
+<li><p>Rdt2.0:经具有比特差错信道的可靠数据传输（肯定确认、否定确认），这种基于重传机制的可靠数据传输协议被称为自动重传请求（ARQ）协议，在ARQ协议中有三种协议功能来处理比特差错的情况：差错检测 、接收方反馈 、重传，发送方将不会发送一块新数据，除非发送方确信接收方已正确接收当前分组。因此Rdt2.0这样的协议被称为停等协议</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/rdt2yc.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/rdt2wc.png"></p>
+<blockquote>
+<p>rdt2.0未考虑ACK和NAK分组受损的情况，这也是2.1诞生的原因</p>
+</blockquote>
+</li>
+<li><p>Rdt2.1：如果ACK\NAK受损 可能导致冗余 为了处理冗余发送方对每个分组增加序列号 如果ACK\NAK受损，发送方重传当前分组，接收方丢弃冗余分组</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/rdt21send.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/rdt21receive.png"></p>
+<blockquote>
+<p>因为除了对的都是错的，那么可以去掉NAK，只传ACK，这样可以节省空间，这也是2.2的原理</p>
+</blockquote>
+</li>
+<li><p>Rdt2.2 无NAK协议，代替NAK，接收方对最后正确接收的分组发送ACK</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/rdt22.png"></p>
+<blockquote>
+<p>rdt2.x解决了流量控制问题，以及比特出错的情况，但是丢包情况却没有解决，这也是rdt3.0的任务</p>
+</blockquote>
+</li>
+<li><p>Rdt3.0是具有比特差错和丢包信道的可靠数据传输，为解决丢包问题，发送方等待ACK一段合理的时间，需要倒数计时器来解决这个问题</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/rdt3.png"></p>
+</li>
+<li><p>停等操作使得rdt3.0的效率十分低下，可以使用流水线技术来解决</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/td.png" alt="停等操作效率低"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/lsx.png" alt="流水线提高效率"></p>
+</li>
+<li><p>流水线技术中分组丢失之后如何重传</p>
+<ul>
+<li><p>GBN（Go-Back-N）协议：其后分组全部重传</p>
+<ul>
+<li><p>累计ACK：收到ACK（n），则n以及之前的分组都到了</p>
+</li>
+<li><p>若滑动窗口大小为n,则发送方只能连续发送n个数据包，同时，窗口中未被确认的分组数不能超过n</p>
+</li>
+<li><p>对所有的已发送但未确认的分组统一设置一个定时器，从一次流水的最“老”分组开始计时</p>
+</li>
+<li><p>超时（n）,重传分组n和窗口中所有序号大于n的分组</p>
+</li>
+<li><p>GBN滑动窗口大小</p>
+<ul>
+<li>发送端&lt;=2^k-1</li>
+<li>接收端=1</li>
+</ul>
+<blockquote>
+<p>如果收到重复的分组就丢弃重发ACK，如果有分组丢失，但是后面的分组到了，也是将这一部分丢弃，然后重发按序到达的最高序号分组的ACK</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>SR（选择重传）协议：仅重传该分组</p>
+<ul>
+<li><p>发送方</p>
+<ul>
+<li>从上层收到ACK（n）,若n在[sendbase,sendbase+N-1]范围内，则标记n已经被接受，如果n=sendbase，则将窗口基序号推到下一个未确定序号</li>
+<li>超时（n）:为每一个分组定义计时器，如果n超时，则重传并且重置定时器</li>
+</ul>
+</li>
+<li><p>接收方</p>
+<ul>
+<li>收到n在[sendbase,sendbase+N-1]范围内，发送ACK（n）</li>
+<li>如果收到分组不是连续的，先进行缓存</li>
+<li>按序分组</li>
+</ul>
+<blockquote>
+<p>接收方和发送方窗口都不能超过2^(k-1)</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>TCP报文首部结构</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/tcp.png"></p>
+<ul>
+<li><p>源端口和目的端口各占2字节</p>
+</li>
+<li><p>序号字段占4字节，TCP连接中传送的每一个字节都编上一个序号，序号字段的值则指的是本报文段所发送的数据的第一个字节在整个报文字节流中的序号</p>
+</li>
+<li><p>确认号字段占4字节，是期望收到对方的下一个报文段的数据的第一个字节的序号</p>
+<blockquote>
+<p>和之前不同，之前收到x号分组就发ACK（x），这里收到x号分组就发ACK（x+1）表示期待收到x+1号分组</p>
+</blockquote>
+</li>
+<li><p>首部长度占4bits，它指示以32bit的字为单位的TCP首部长度，若选项字段为空，TCP首部典型长度为20字节</p>
+</li>
+<li><p>保留字段占6bits，该字段是以后所用，目前应该置为0</p>
+</li>
+<li><p>URG（紧急比特）=1时，表示紧急指针字段有效，它告诉系统此报文中有紧急数据，应该尽快传送（一般不使用）</p>
+</li>
+<li><p>ACK（确认比特）=1时，确认号字段有效，=0无效</p>
+</li>
+<li><p>PSH（推送比特）=1时，TCP尽快交付该报文，不等整个缓存都填满再交付</p>
+</li>
+<li><p>RST (复位比特)=1时，表示TCP连接中出现严重差错，必须释放连接，再重新建立连接</p>
+</li>
+<li><p>SYN（同步比特）=1时，这是一个连接请求或者连接接受报文</p>
+</li>
+<li><p>FIN（终止比特）=1时，表明此报文段的数据全部发送完毕，要求释放运输连接</p>
+</li>
+<li><p>窗口字段占两个字节，用来控制对方发送的数据量，单位是字节，TCP连接的一端根据设置的缓存空间大小确定自己的接受窗口大小，然后通知对方来确定对方的发送窗口的上限</p>
+</li>
+<li><p>校验和占两个字节，该字段检验的范围包括首部和数据两个部分，所以计算的时候，<code>需要在TCP报文段的前面加上12字节的伪首部</code></p>
+</li>
+<li><p>紧急指针字段占2个字节，该字段指出在本报文段中的紧急数据的最后一个字号的序号</p>
+</li>
+<li><p>选项字段，长度可变，TCP只规定了一种选项，即最大报文长度（MSS），MSS是TCP报文中数据段的最大长度。</p>
+</li>
+<li><p>填充字段为了使整个首部长度是4字节的整数倍</p>
+</li>
+</ul>
+</li>
+<li><p>RTT=往返时延，SampleRTT=样本RTT（忽略重传），EstimatedRTT=样本RTT的均值，DevRTT=EstimatedRTT和SampleRTT的偏差</p>
+</li>
+<li><p>EstimatedRTT=（1-a）* EstimatedRTT+a * SampleRTT，参考值a=0.125</p>
+</li>
+<li><p>DevRTT=（1-b）* DevRTT+b * |SampleRTT-EstimatedRTT|,参考值b=0.25</p>
+<blockquote>
+<p>第一次计算的时候DevRTT=0.5*SampleRTT</p>
+</blockquote>
+</li>
+<li><p>产生TCP ACK的建议</p>
+<table>
+<thead>
+<tr>
+<th align="center">接受方事件</th>
+<th align="center">TCP接收方动作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">所期望序号的报文段按序到达，所有在期望序号及其以前的数据都已经被确认</td>
+<td align="center">延迟的ACK，对另一个按序报文段的到达最多等待500ms，如果下一个按序报文段还没有到达，就发送一个ACK</td>
+</tr>
+<tr>
+<td align="center">所期望序号的报文段按序到达，另一个按序报文段等待发送ACK</td>
+<td align="center">立即发送单个累计ACK，以确认两个按序报文段</td>
+</tr>
+<tr>
+<td align="center">比期望序号大的失序报文段到达，检测出数据流中的间隔</td>
+<td align="center">立即发送冗余ACK，指明下一个期待字节的序号</td>
+</tr>
+<tr>
+<td align="center">能部分或者完全填充接收数据间隔的报文段到达</td>
+<td align="center">假如该报文段起始于间隔的低端，则立即发送ACK</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<ol start="20">
+<li><p>快速重传：接收到重复的ACK就重传，不一定非要等到规定的时间间隔</p>
+</li>
+<li><p>TCP通过三次握手建立连接</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/tcp3.png"></p>
+</li>
+<li><p>拥塞控制的方法</p>
+<ul>
+<li>网络辅助的拥塞控制<ul>
+<li>直接网络反馈：路由器以阻塞分组的形式通知发送方网络阻塞</li>
+<li>由接收方的网络反馈：路由器标识从发送方到接收方分组中某个字段来指示拥塞产生，由接收方通知发送方</li>
+</ul>
+</li>
+<li>端到端拥塞控制（目前TCP使用该方法）<ul>
+<li>网络层不为拥塞控制提供任何帮助和支持</li>
+<li>端系统通过对网络行为（丢包或者时延增加）的观测来判断网络是否发生拥塞</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
                 
             </div>
             <hr/>
@@ -660,7 +1085,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://fx-zpy.github.io/resource/index.html">http://fx-zpy.github.io/resource/index.html</a>
+                    <a href="http://fx-zpy.github.io/posts/a06f01f4.html">http://fx-zpy.github.io/posts/a06f01f4.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -697,7 +1122,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E8%AE%A1%E7%BD%91/">
+                                    <span class="chip bg-color">计网</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1046,34 +1475,45 @@ new Valine({
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/resource/index.html">
+                <a href="/posts/a06f01f4.html">
                     <div class="card-image">
                         
+                        <img src="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/blog/9.png" class="responsive-img" alt="计算机网络知识总结（二）">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928014621.jpg" class="responsive-img" alt="资源分享">
-                        
-                        <span class="card-title">资源分享</span>
+                        <span class="card-title">计算机网络知识总结（二）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            计算机网络笔记，这是自顶向下的第二章和第三章的部分，也是比较重要的一部分
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-07-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-10
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            fx-zpy
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    计算机网络
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%A1%E7%BD%91/">
+                        <span class="chip bg-color">计网</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1081,37 +1521,47 @@ new Valine({
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/resource/index.html">
+                <a href="/posts/de1fcd2b.html">
                     <div class="card-image">
                         
+                        <img src="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/blog/8.png" class="responsive-img" alt="计算机网络知识总结（一）">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928014621.jpg" class="responsive-img" alt="资源分享">
-                        
-                        <span class="card-title">资源分享</span>
+                        <span class="card-title">计算机网络知识总结（一）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            学习计算机网络的笔记，方便以后复习的时候能够快速回忆起学习的知识。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-07-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-08
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            fx-zpy
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    计算机网络
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%A1%E7%BD%91/">
+                        <span class="chip bg-color">计网</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1276,6 +1726,13 @@ new Valine({
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 
