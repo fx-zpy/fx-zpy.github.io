@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="计算机 网络安全 渗透测试 前后端">
+    <meta name="keywords" content="计算机网络知识总结（一）, 计算机 网络安全 渗透测试 前后端">
     <meta name="description" content="本科 | 前后端 | 网络安全">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>无言</title>
+    <title>计算机网络知识总结（一） | 无言</title>
 
     <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/blog/tx.jpg">
 
@@ -547,12 +547,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928021815.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/blog/8.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">计算机网络知识总结（一）</h1>
                 </div>
             </div>
         </div>
@@ -671,12 +671,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%AE%A1%E7%BD%91/">
+                                <span class="chip bg-color">计网</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                计算机网络
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -685,28 +698,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-26
+                    2021-11-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-13
+                    2021-11-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
 
@@ -724,7 +737,104 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                google-site-verification: google110e5e5e14c8dcf0.html
+                <blockquote>
+<p>这里将所学的计算机网络的 课程的知识进行归纳总结，预计一篇完不成，所以分篇进行归纳总结，这是自顶向下第七版的第一章，主要是从总体介绍一下计算机网络的模型和接下来会接触到的知识。</p>
+</blockquote>
+<h1 id="一、计算机网络和因特网"><a href="#一、计算机网络和因特网" class="headerlink" title="一、计算机网络和因特网"></a>一、计算机网络和因特网</h1><h2 id="相关问题和知识点总体概述"><a href="#相关问题和知识点总体概述" class="headerlink" title="相关问题和知识点总体概述"></a>相关问题和知识点总体概述</h2><ol>
+<li><p>什么是因特网</p>
+<ul>
+<li>具体构成：基本硬件和软件组件，</li>
+<li>分布式应用服务</li>
+</ul>
+</li>
+<li><p>端系统是主机，通过通信链路和分组交换机连接到一起，通过因特网服务提供商（ISP）接入因特网</p>
+</li>
+<li><p>主机分为客户机和服务器</p>
+</li>
+<li><p>当今因特网内，最著名的分组交换机为<strong>路由器</strong>和<strong>链路层交换机</strong></p>
+</li>
+<li><p>端系统、分组交换机和其他部件都需要运行一系列协议，其中最重要的两个协议是TCP（传输控制协议）和IP（网际协议）。<code>因特网的主要协议统称为TCP/IP</code></p>
+</li>
+<li><p>因特网的分布式应用程序运行在端系统上，分许交换机只是用来加速端系统之间数据交换的，不运行应用程序</p>
+</li>
+<li><p>端系统之间的数据交互通过<strong>套接字接口</strong>来对应交互</p>
+</li>
+<li><p>协议定义了在两个或多个通信实体之间交换的报文格式和次序，以及在报文传输/接收或其他事件方面采取的动作</p>
+</li>
+<li><p>接入网指将端系统物理连接到其边缘路由器的网络，而<code>边缘路由器是端系统到任意其他的远程端系统的路径上的第一台路由器</code>。接入网分为以下几种</p>
+<ul>
+<li>家庭接入：DSL（数字用户线）、电缆、FTTH（光纤到户）、拨号、卫星</li>
+<li>企业（和家庭）接入：以太网、WiFi</li>
+<li>广域无线接入：3G（出书那年4G还没出)、LTE</li>
+</ul>
+</li>
+<li><p>物理媒体分为导引型和非导引型媒体，导引型是电波沿着固体媒体前行，例如光缆、双绞铜线、同轴电缆，非导引型是电波在空气或者外层空间中传播，例如无线局域网和数字卫星频道</p>
+</li>
+<li><p>通过网络链路和交换机移动数据有两种基本方法，电路交换和分组交换</p>
+<ul>
+<li>分组交换：端系统之间彼此交换报文，报文比较长，源端将长报文划分为较小的数据块，每一块成为分组（packet）<ul>
+<li>输入端的机制是存储转发传输，即在交换机能够开始向输出链路传输该分组的第一个比特之前，必须接收到整个分组</li>
+<li>分组交换由于其到端时延是不可预测的，所以不适合实时服务。</li>
+<li>分组交换提供了比电路交换更好的带宽共享；他比电路交换更简单，更有效，实现成本更低</li>
+<li>分组交换时延类型<ul>
+<li>节点处理时延：检查分组首部和决定将该分组导向何处所需要的时间是处理时延的一部分，除此之外，还需要检查比特级差错。高速路由器的处理时延通常是微秒或更低的数量级</li>
+<li>排队时延：在队列中，当分组在链路上等待传输时，产生排队时延。影响排队时延的因素有：到达该队列的流量强度和性值。实际的排队时延通常在毫秒到微秒级</li>
+<li>传输时延：传输距离/传输速度，得到的是传输时间。这个时间就是将所有的比特推向链路所需要的时间。实际的传输时延通常在毫秒到微秒级</li>
+<li>传播时延：当一个比特被推进链路后，该比特需要向路由器B传播。从该链路的起点到路由器B传播所需要的时间时传播时延</li>
+<li>调制/编码时延：量级为几十毫秒。</li>
+<li>节点总时延：以上时延之和</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>电路交换<ul>
+<li>频分复用</li>
+<li>时分复用</li>
+<li>电路交换的效率较低，因为在静默的时候专用电路是空闲的。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>流量强度</strong>：La/R,L是每个分组的长度，单位为比特，a是分组到达队列的平均速率，La是单位时间到达队列的分组总长，R是传输速率，流量强度&gt;1会造成拥塞，所以一般设计的时候流量强度不能大于1</p>
+</li>
+<li><p>丢包：由于队列容量有限，在队列满了以后，路由器会丢弃队尾若干分组</p>
+</li>
+<li><p>瞬时吞吐量：某一时刻目的主机接收到文件的速率</p>
+</li>
+<li><p>平均吞吐量：文件总大小/接收文件总用时</p>
+</li>
+<li><p>协议分层</p>
+<ul>
+<li><code>应用层</code>：应用层是网络应用程序及其应用层协议存留的地方。应用层协议分布在多个端系统上，一个端系统中的应用程序使用协议与另一个端系统中的应用程序交换信息分组。我们将这种位于应用层的信息分组称为报文<ul>
+<li>HTTP（为web文档提供了请求和传送）</li>
+<li>SMTP（提供了电子邮件报文的传输）</li>
+<li>FTP（提供两个端系统之间的文件传送）</li>
+</ul>
+</li>
+<li><code>表示层</code>（七层模型）</li>
+<li><code>会话层</code>（七层模型）</li>
+<li><code>运输层</code>：运输层提供了在应用程序端点之间传送应用报文的服务<ul>
+<li>TCP:向它的应用程序提供了面向连接的服务，这种服务包括了应用层报文向目的地取得确保传递和流量控制（即发送方和接收方的速率匹配）。并将长报文划分为短报文，并提供拥塞控制机制</li>
+<li>UDP：向它的应用程序提供无连接服务。这是一种不提供不必要的服务的服务，不提供可靠性，没有流量控制，也没有拥塞控制</li>
+</ul>
+</li>
+<li><code>网络层</code>：因特网的网络层负责将称为数据报的网络层分组从一台主机移动到另一台主机。源主机中的因特网运输层协议（TCP/UDP）向网络层递交运输层报文段和目的地址<ul>
+<li>IP协议：定义了数据报中的各个字段以及端系统和路由器如何作用于这些字段。仅有一个IP协议，所有具有网络层的因特网组件都必须运行IP协议</li>
+<li>选路协议：数据报根据该路由从源传输到目的地</li>
+</ul>
+</li>
+<li><code>链路层</code>：为了将分组从一个节点移动到路径的下一个节点，网络层必须依靠链路层的服务。特别是在每个节点，网络层将数据报传给链路层，链路层沿着路径将数据报传递给下一个节点。在下一个节点，链路层将数据报上传给网络层。我们将链路层分组称为帧。链路层的任务是将整个帧从一个网络元素移动到邻近的网络元素<ul>
+<li>以太网、wifi、点对点协议（PPP）</li>
+</ul>
+</li>
+<li><code>物理层</code>：物理层的任务是将每一帧中的一个一个比特从一个节点移动到下一个节点。该层中的协议与链路相关，并与链路的实际传输媒体（双绞铜线，单模光纤）有关</li>
+</ul>
+</li>
+<li><p>封装：报文从一层到另一层，另一层会加上该层的首部信息，将报文进行封装然后传送给下一层，应用层报文和运输层首部信息共同构成了运输层报文段 ，运输层报文段封装了应用层报文。运输层向网络层传递报文段，网络层增加了源和目的端系统地址等网络层首部信息，形成了网络层数据报。链路层增加自己的链路层首部信息并创建了链路层帧。每一层分组具有两种类型的字段：首部字段和有效载荷字段</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/jwfz.png" alt="封装"></p>
+</li>
+</ol>
+
                 
             </div>
             <hr/>
@@ -750,7 +860,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://fx-zpy.github.io/google1xxxxxxx0.html">http://fx-zpy.github.io/google1xxxxxxx0.html</a>
+                    <a href="http://fx-zpy.github.io/posts/de1fcd2b.html">http://fx-zpy.github.io/posts/de1fcd2b.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -787,7 +897,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E8%AE%A1%E7%BD%91/">
+                                    <span class="chip bg-color">计网</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1136,34 +1250,45 @@ new Valine({
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/google1xxxxxxx0.html">
+                <a href="/posts/de1fcd2b.html">
                     <div class="card-image">
                         
+                        <img src="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/blog/8.png" class="responsive-img" alt="计算机网络知识总结（一）">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928021815.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
+                        <span class="card-title">计算机网络知识总结（一）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            学习计算机网络的笔记，方便以后复习的时候能够快速回忆起学习的知识。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-08
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            fx-zpy
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    计算机网络
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%A1%E7%BD%91/">
+                        <span class="chip bg-color">计网</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1171,37 +1296,55 @@ new Valine({
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/google1xxxxxxx0.html">
+                <a href="/posts/7f157780.html">
                     <div class="card-image">
                         
+                        <img src="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/blog/7.png" class="responsive-img" alt="Memorandum备忘录">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928021815.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
+                        <span class="card-title">Memorandum备忘录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            写了一个备忘录，可以提前设置任务和时间然后提醒你去完成，界面是用electron完成的。项目打包过程也是真的心累(ノへ￣、)
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-23
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            fx-zpy
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/electron/">
+                        <span class="chip bg-color">electron</span>
+                    </a>
+                    
+                    <a href="/tags/HTML/">
+                        <span class="chip bg-color">HTML</span>
+                    </a>
+                    
+                    <a href="/tags/JS/">
+                        <span class="chip bg-color">JS</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1366,6 +1509,13 @@ new Valine({
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 
