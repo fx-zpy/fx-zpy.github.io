@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="清新花卉, 计算机 网络安全 渗透测试 前后端">
+    <meta name="keywords" content="说说废话, 计算机 网络安全 渗透测试 前后端">
     <meta name="description" content="本科 | 前后端 | 网络安全">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>清新花卉 | 无言</title>
+    <title>说说废话 | 无言</title>
 
     <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/blog/tx.jpg">
 
@@ -440,19 +440,29 @@
 
 </header>
 
-                        <link rel="stylesheet" href="/css/gallery.css">
+                        
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '70c4d87ec92303035b43f6454671bd026311bf9cc33b7749e1ca86d39c6639f9';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/justifiedGallery/3.7.0/css/justifiedGallery.min.css">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928015537.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/blog/11.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">清新花卉</h1>
+                    <h1 class="description center-align post-title">说说废话</h1>
                 </div>
             </div>
         </div>
@@ -462,203 +472,661 @@
 
 
 
-<!--   "  <p class=\"photo-name\">" + photo + "</p>\n" +
-文件名先注释掉  -->
+<main class="container content">
 
-<!-- 不加密写法 -->
-<!-- <div class="container">
-    <div class="photo-wrapper" >
-        <div class="waterfall" id="mygallery">
-            <a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/01.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/01.jpg"
-       alt=清新花卉/01.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/02.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/02.jpg"
-       alt=清新花卉/02.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/03.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/03.jpg"
-       alt=清新花卉/03.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/04.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/04.jpg"
-       alt=清新花卉/04.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/05.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/05.jpg"
-       alt=清新花卉/05.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/06.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/06.jpg"
-       alt=清新花卉/06.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/07.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/07.jpg"
-       alt=清新花卉/07.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/08.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/08.jpg"
-       alt=清新花卉/08.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/09.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/09.jpg"
-       alt=清新花卉/09.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/10.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/10.jpg"
-       alt=清新花卉/10.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/11.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/11.jpg"
-       alt=清新花卉/11.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/12.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/12.jpg"
-       alt=清新花卉/12.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/13.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/13.jpg"
-       alt=清新花卉/13.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/14.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/14.jpg"
-       alt=清新花卉/14.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/15.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/15.jpg"
-       alt=清新花卉/15.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/16.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/16.jpg"
-       alt=清新花卉/16.jpg>
-    </a>
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/nonsense/">
+                                <span class="chip bg-color">nonsense</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%BF%83%E4%BA%8B/" class="post-category">
+                                心事
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-11-11
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-11-11
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    875
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    2 分
+                </div>
+                
+
+                
+            </div>
         </div>
-    </div>
-</div> -->
+        <hr class="clearfix">
 
-<main class="content" >
-<!-- 加密写法 -->
-<div class="container">
-    <div class="photo-wrapper">
         
-            <div class="waterfall" id="encrypt-blog">
-                <a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/01.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/01.jpg"
-       alt=清新花卉/01.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/02.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/02.jpg"
-       alt=清新花卉/02.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/03.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/03.jpg"
-       alt=清新花卉/03.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/04.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/04.jpg"
-       alt=清新花卉/04.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/05.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/05.jpg"
-       alt=清新花卉/05.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/06.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/06.jpg"
-       alt=清新花卉/06.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/07.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/07.jpg"
-       alt=清新花卉/07.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/08.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/08.jpg"
-       alt=清新花卉/08.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/09.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/09.jpg"
-       alt=清新花卉/09.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/10.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/10.jpg"
-       alt=清新花卉/10.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/11.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/11.jpg"
-       alt=清新花卉/11.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/12.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/12.jpg"
-       alt=清新花卉/12.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/13.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/13.jpg"
-       alt=清新花卉/13.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/14.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/14.jpg"
-       alt=清新花卉/14.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/15.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/15.jpg"
-       alt=清新花卉/15.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/16.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/16.jpg"
-       alt=清新花卉/16.jpg>
-    </a>
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>不知道该怎么开口，这应该是第一次在博客里面发泄自己的情绪，不知道以后还会不会这样，如果可以，谁又会去自寻烦恼呢</p>
+<p>说起来我算是找准了自己的方向，但是这个社会越深入的去了解就会越无力，我不知道自己是不是属于那种开拓性的人格，但是我确实不喜欢这个被垄断着的世界和社会，有的时候我也会去逃避现实，可那又有什么用呢，无论自己怎么躲，仍然要回来接受社会的毒打，我也想无忧无虑，可是没有什么办法啊，我只是一个普通人而已，也要为了生活而劳碌，疲于奔命，每当夜里自己看着别人的成功的时候我都会想，这个社会如果公平一点就好，如果那些毫无底线的演员没有那么多的收入，把这些收入用来充实普通人的生活该有多好，但是确实想多了，这个时代，流量为王，一切和流量有关的人或者事情都能过的充足，我自己也是因为这个才选择了互联网，说到底最后还是一个社畜，和其他行业的社畜没什么两样，只不过这个行业里面的社畜生活更好一点吧，如果我早生20年，现在是否也是一届巨头，想多了，更大的可能我应该没接受啥教育在某一个不知名的世界500万强的电子厂里面打工，有的时候我也该感谢这个时代，起码让我有机会去迷茫</p>
+<p>关于生活，来到基地以后，这里的硬件条件确实不错，我甚至觉得自己一个人的话可以在这住上个几十年，多想就这样啊，但是还是想想就好，自己渐渐学会自己做一点食物，以后应该也不会饿死，不用为了外面的卫生而焦急说到底这些本该在毕业的时候煽情一点的话语现在却突然涌现出来，应该是我自己慢慢习惯这里的生活了吧。学会照顾自己，真好</p>
+<p>关于情感，我应该是一个矛盾体，羡慕着别人的爱情却无法迈出自己的双腿，应该也会与宋琪无缘了吧，说到底我连自己会不会去爱都没有搞清楚，经常给自己一个借口，本科阶段不应该想这些，但是以后呢，自己真的能迈过心理的那道坎吗？我的青春是一片灰色，里面有一抹橙色，现在看来，年少心动的只有康媛媛了吧，那个课间那抹微笑，而高三造过的孽对我来说已经释怀，不知道刘娇娇是否会释怀，希望她也会吧，我应该学着去减轻生活中爱的成分，对我来说也许真的不适合说爱这个字，今天11.11，祝自己单身快乐！</p>
+<p>感觉还有好多话想说，但是不知道该怎么说，先这样吧，以后有机会在bb，希望github多坚挺几十年吧，我还想在自己退休以后看看自己写的心里话和烦恼，希望那个时候的自己是一个幸福的人。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">fx-zpy</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://fx-zpy.github.io/posts/f60ce65.html">http://fx-zpy.github.io/posts/f60ce65.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">fx-zpy</a>
+                    !
+                </span>
             </div>
         
     </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/nonsense/">
+                                    <span class="chip bg-color">nonsense</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo,twitter,facebook,google,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
 </div>
-<main>
-<script src=""></script>
-<script src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-<script src="https://cdn.staticfile.org/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js"></script>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/null") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    .v[data-class="v"] .vwrap .vheader .vinput {
+      width: 32%;
+      border-bottom: 1px dashed #dedede;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+let metaPlaceholder = {"nick":"昵称/QQ号(必填)","mail":"邮箱(必填)","link":"网址(https://)"} ;
+//这里要换行
+new Valine({
+        el: '#vcomments',
+        appId: 'SRXSC16zf20HIuCisNyhziIN-gzGzoHsz',
+        appKey: 'M1iObX56IBl39dN4TVTDFQ4l',
+        notify: 'true' === 'true',
+        verify: 'true' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '10',
+        lang: 'zh-CN',
+        placeholder: '有什么想说的都可以留言..',
+        meta: ["nick", "mail", "link"],
+        recordIP: 'true' === 'true',
+        enableQQ: 'monsterid',
+        requiredFields: ["f3bc23e0905114ab82f649ced2a7fe0f"],
+        master: ["f3bc23e0905114ab82f649ced2a7fe0f"],
+        friends: ["f3bc23e0905114ab82f649ced2a7fe0f", ""],
+        tagMeta: ["博主", "小伙伴", "访客"],
+        metaPlaceholder: metaPlaceholder,
+
+    });
+
+    document.body.addEventListener('click', function(e) {
+        if (e.target.classList.contains('vsubmit')) {
+            const email = document.querySelector('input[type=email]');
+            const nick = document.querySelector('input[name=nick]');
+            const reg = /^[A-Za-z0-9_-\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+            if (!email.value || !nick.value || !reg.test(email.value)) {
+                const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+                const vmark = document.querySelector('.vmark');
+                vmark.innerHTML = str;
+                vmark.style.display = 'block';
+
+                e.stopPropagation();
+
+                setTimeout(function() {
+                    vmark.style.display = 'none';
+                    vmark.innerHTML = '';
+                }, 2500);
+            }
+        }
+        }, true);
+</script>
+
+
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/f60ce65.html">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/blog/11.png" class="responsive-img" alt="说说废话">
+                        
+                        <span class="card-title">说说废话</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            最近emo了，未来、生活想的有点多了，但是又忍不住不想，说说废话...
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%BF%83%E4%BA%8B/" class="post-category">
+                                    心事
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/nonsense/">
+                        <span class="chip bg-color">nonsense</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/ed71a2a6.html">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/blog/10.jpeg" class="responsive-img" alt="计算机网络知识总结（三）">
+                        
+                        <span class="card-title">计算机网络知识总结（三）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            计算机网络笔记，这是自顶向下的第四章和第五章的部分，这里只是网络层的知识
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    计算机网络
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%A1%E7%BD%91/">
+                        <span class="chip bg-color">计网</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
 
 <script>
-  // $(".waterfall").lazyload();
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
 
-$("a[rel=example_group]").fancybox();
-//  不加密写法
-// $("#mygallery").justifiedGallery({margins: 5, rowHeight: 150});
-$("#encrypt-blog").justifiedGallery({margins: 5, rowHeight: 150});
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('1')) {
+            return;
+        }
 
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 无言<br />'
+            + '文章作者: fx-zpy<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
 </script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    
+
+</main>
+
+
 
 
                             <footer class="page-footer bg-color">
