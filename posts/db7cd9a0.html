@@ -686,7 +686,7 @@
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>这里使用net里面的函数listen对本地4000端口进行监听，为啥是4000端口，其实端口号无所谓，4000端口是每次更新博客的时候本地调试的端口，因为经常能看<del>色图</del>博客，所以使用该端口，这里接受信息的缓冲区的大小为4096，也就是4kb，来自4000端口发送的数据大小不能超过该大小，使用的时候不会报错，但是服务器端只会截取规定缓冲区的大小，我实验过使用的大小为4的缓冲区来接受超过10个字节的数据，最后只是截取到前四个字节的数据就结束了。这里使用netcat下的一个可执行程序nc来进行数据的发送。分配好端口号之后就发送数据，同时服务器端接受到数据之后就停止了，因为本身就是一个单程的服务器。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="/medias/blog/9.png" alt="服务器端接收数据"></p>
+<p><img src="/medias/blog/9.png" alt="服务器端接收数据"></p>
 <h1 id="并发服务器"><a href="#并发服务器" class="headerlink" title="并发服务器"></a>并发服务器</h1><p>并发服务器支持对多个客户端进行数据的传送与接收。</p>
 <h2 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h2><p>服务器端的代码在之前单程服务器的基础上进行改进，增加协程来处理与客户端的交互。主体代码如下。</p>
 <pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">package</span> main
@@ -739,8 +739,8 @@
 
 <p>这里通过协程对每一个请求的客户端的数据都能进行处理，在实际工作中服务器端接收到客户端的数据之后可以进行很多处理，我这里仅仅进行了对敏感词汇sb的和谐，并把数据重新发回给客户端。上述代码的停止条件是输入exit，这里的处理仅仅适用于nc测试，因为nc测试中我们输入了exit回车之后换行也一并输入了进来，所以上述代码中判断条件为string(buffer[:len-1]) == “exit”，自编客户端程序进行测试的时候由于编写者的不同，数据的处理可能不同。需要根据实际情况进行修改。</p>
 <h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><h3 id="nc"><a href="#nc" class="headerlink" title="nc"></a>nc</h3><p>这里我开了两个进程来测试服务器端能否实现并发，结果发现可以。输入exit客户端也能顺利的结束进程。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="/medias/blog/10.png" alt="测试并发"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="/medias/blog/11.png" alt="测试结束"></p>
+<p><img src="/medias/blog/10.png" alt="测试并发"></p>
+<p><img src="/medias/blog/11.png" alt="测试结束"></p>
 <h3 id="客户端程序"><a href="#客户端程序" class="headerlink" title="客户端程序"></a>客户端程序</h3><p>这里也可以自编客户端程序进行测试，主动连接对应的端口号，对其进行数据的交互。这里我写了一个客户端程序进行测试，也是使用go语言进行编写。</p>
 <pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">package</span> main
 
@@ -783,7 +783,7 @@
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>测试截图如下</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="/medias/blog/12.png" alt="客户端程序测试"></p>
+<p><img src="/medias/blog/12.png" alt="客户端程序测试"></p>
 <p>注意这里输入exit不能退出，因为客户端输入的时候输入回车，字符串后面会跟着两个字符，回车\r，换行\n，所以服务器端需要进行修改才能退出客户端程序，即将服务器端的判断条件改为string(buffer[:len-1]) == “exit”。但是这样感觉不方便，可以在测试的客户端输入条件判断一下，为exit就退出。当然这些都是小细节。</p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>单程和并发区别在于是否使用了协程，本次测试也用到了<del>脑残</del>nc和客户端程序。</p>
 
@@ -1854,11 +1854,6 @@ $(function () {
                                                                                                                                 <script src="/libs/instantpage/instantpage.js" type="module"></script>
                                                                                                                                 
 
-                <script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+                </body>
 
 </html>

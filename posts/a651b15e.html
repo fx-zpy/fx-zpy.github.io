@@ -652,19 +652,19 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="题目背景"><a href="#题目背景" class="headerlink" title="题目背景"></a>题目背景</h2><p>这道题是我的一个同学转了安全以后发给我让我帮忙做一下，但是其实本来我也没有接触多少逆向的知识，但是还是打算尝试一下，题目是dotnetcrack，打开可执行程序以后，弹出一个弹窗如下</p>
-<img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="/medias/blog/1.png" alt="弹窗" style="zoom:50%;">
+<img src="/medias/blog/1.png" alt="弹窗" style="zoom:50%;">
 
 <p>尝试输入一串字符串，发现报错。</p>
-<img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="/medias/blog/2.png" alt="报错" style="zoom:50%;">
+<img src="/medias/blog/2.png" alt="报错" style="zoom:50%;">
 
 <p>学习了一下这方面的知识以后，也是使用了一款反编译工具ILSpy将程序进行反编译，找到判断的关键代码，</p>
-<img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="/medias/blog/3.png" alt="反编译后代码" style="zoom: 50%;">
+<img src="/medias/blog/3.png" alt="反编译后代码" style="zoom: 50%;">
 
 <p>如图可以发现其判断的语句是”2yyUjXprc1+2TwAbbVU6eQ==” == Encode(textBox1.Text)，显然，正确的字符串进行某种规则加密后的密文为2yyUjXprc1+2TwAbbVU6eQ==。</p>
 <h2 id="解法一：投机取巧"><a href="#解法一：投机取巧" class="headerlink" title="解法一：投机取巧"></a>解法一：投机取巧</h2><p>已知判断条件之后，可以修改判断条件为!=，因为随机输入一串字符串，相等的概率极低，那么相反，不相等的概率极高，修改之后，随便输入只要不是正确的明文就可以弹出恭喜的弹窗，实验了一下，因为ILSpy不能直接修改代码，所以讲代码保存出来进行修改，</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="/medias/blog/4.png" alt="修改判断逻辑"></p>
+<p><img src="/medias/blog/4.png" alt="修改判断逻辑"></p>
 <p>保存之后重新编译该文件，这样随便输入就可以弹出正确的弹窗了。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="/medias/blog/5.png" alt="第一次尝试成功"></p>
+<p><img src="/medias/blog/5.png" alt="第一次尝试成功"></p>
 <h2 id="解法二：再次投机取巧"><a href="#解法二：再次投机取巧" class="headerlink" title="解法二：再次投机取巧"></a>解法二：再次投机取巧</h2><p>由于解法一虽然可以弹出正确的弹窗，但是正确的明文却还是不知道，所以这次还是投机取巧的办法，但是能够获取明文，这里针对加密函数编写了一段解密函数。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">public</span> string <span class="token function">Decode</span><span class="token punctuation">(</span><span class="token parameter">string data</span><span class="token punctuation">)</span>
 		<span class="token punctuation">{</span>
@@ -709,12 +709,12 @@
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>textBox1.Text就是我们输入的内容，那么我们输入密文，弹出的就是正确的明文了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="/medias/blog/8.png" alt="修改错误输出"></p>
+<p><img src="/medias/blog/8.png" alt="修改错误输出"></p>
 <p>这样就可以得到明文内容了，是H0lyTru3EasY，这里再把明文输入就可以得到正确的提示了。</p>
-<img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="/medias/blog/7.png" alt="正确提示" style="zoom:50%;">
+<img src="/medias/blog/7.png" alt="正确提示" style="zoom:50%;">
 
 <h2 id="解法三：直接解密"><a href="#解法三：直接解密" class="headerlink" title="解法三：直接解密"></a>解法三：直接解密</h2><p>因为上个学期也学过密码学原理这门课，虽然我学的不咋地，但是还是尝试读懂了加密函数，发现这里采用了DES的CBC加密模式，并且使用了Base64进行编码，那么可以直接利用网上的解密工具，密钥从代码中可以得知是gctf{got，偏移值是2niceday}，直接进行解密也能获得明文。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="/medias/blog/6.png" alt="在线解密"></p>
+<p><img src="/medias/blog/6.png" alt="在线解密"></p>
 
                 
             </div>
@@ -1783,11 +1783,6 @@ $(function () {
                                                                                                                                 <script src="/libs/instantpage/instantpage.js" type="module"></script>
                                                                                                                                 
 
-                <script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+                </body>
 
 </html>
