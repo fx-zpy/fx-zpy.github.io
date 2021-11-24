@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="动漫人物, 计算机 网络安全 渗透测试 前后端">
+    <meta name="keywords" content="简易数据库管理系统, 计算机 网络安全 渗透测试 前后端">
     <meta name="description" content="本科 | 前后端 | 网络安全">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>动漫人物 | 无言</title>
+    <title>简易数据库管理系统 | 无言</title>
 
     <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/blog/tx.jpg">
 
@@ -440,19 +440,29 @@
 
 </header>
 
-                        <link rel="stylesheet" href="/css/gallery.css">
+                        
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/justifiedGallery/3.7.0/css/justifiedGallery.min.css">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928015238.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/blog/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">动漫人物</h1>
+                    <h1 class="description center-align post-title">简易数据库管理系统</h1>
                 </div>
             </div>
         </div>
@@ -462,203 +472,946 @@
 
 
 
-<!--   "  <p class=\"photo-name\">" + photo + "</p>\n" +
-文件名先注释掉  -->
+<main class="post-container content">
 
-<!-- 不加密写法 -->
-<!-- <div class="container">
-    <div class="photo-wrapper" >
-        <div class="waterfall" id="mygallery">
-            <a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/01.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/01.jpg"
-       alt=动漫人物/01.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/02.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/02.jpg"
-       alt=动漫人物/02.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/03.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/03.jpg"
-       alt=动漫人物/03.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/04.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/04.jpg"
-       alt=动漫人物/04.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/05.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/05.jpg"
-       alt=动漫人物/05.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/06.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/06.jpg"
-       alt=动漫人物/06.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/07.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/07.jpg"
-       alt=动漫人物/07.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/08.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/08.jpg"
-       alt=动漫人物/08.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/09.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/09.jpg"
-       alt=动漫人物/09.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/10.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/10.jpg"
-       alt=动漫人物/10.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/11.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/11.jpg"
-       alt=动漫人物/11.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/12.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/12.jpg"
-       alt=动漫人物/12.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/13.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/13.jpg"
-       alt=动漫人物/13.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/14.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/14.jpg"
-       alt=动漫人物/14.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/15.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/15.jpg"
-       alt=动漫人物/15.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/16.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/16.jpg"
-       alt=动漫人物/16.jpg>
-    </a>
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        background-color: white;
+        width: 345px;
+        padding-left: 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+    
+    #toc-content {
+        height: calc(100vh - 300px);
+        overflow: scroll;
+
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+        bottom: 120px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%AE%9E%E9%AA%8C/">
+                                <span class="chip bg-color">实验</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                后端
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-11-24
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-11-24
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    6 分
+                </div>
+                
+
+                
+            </div>
         </div>
-    </div>
-</div> -->
+        <hr class="clearfix">
 
-<main class="content" >
-<!-- 加密写法 -->
-<div class="container">
-    <div class="photo-wrapper">
         
-            <div class="waterfall" id="encrypt-blog">
-                <a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/01.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/01.jpg"
-       alt=动漫人物/01.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/02.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/02.jpg"
-       alt=动漫人物/02.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/03.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/03.jpg"
-       alt=动漫人物/03.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/04.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/04.jpg"
-       alt=动漫人物/04.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/05.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/05.jpg"
-       alt=动漫人物/05.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/06.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/06.jpg"
-       alt=动漫人物/06.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/07.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/07.jpg"
-       alt=动漫人物/07.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/08.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/08.jpg"
-       alt=动漫人物/08.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/09.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/09.jpg"
-       alt=动漫人物/09.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/10.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/10.jpg"
-       alt=动漫人物/10.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/11.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/11.jpg"
-       alt=动漫人物/11.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/12.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/12.jpg"
-       alt=动漫人物/12.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/13.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/13.jpg"
-       alt=动漫人物/13.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/14.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/14.jpg"
-       alt=动漫人物/14.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/15.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/15.jpg"
-       alt=动漫人物/15.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/动漫人物/16.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/动漫人物/16.jpg"
-       alt=动漫人物/16.jpg>
-    </a>
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="小声哔哔"><a href="#小声哔哔" class="headerlink" title="小声哔哔"></a>小声哔哔</h1><p>最近事情有点多，关键的是CSP就剩十来天了，有点慌o((⊙﹏⊙))o.，才把数据库实验写完，还有操作系统实验，计网实验，编译原理实验，CSP模拟考。不过反正摸了，我也不追求高分，做好自己的就可以了，本来也不打算把这种东西写到简历里面&lt;(￣︶￣)&gt;，不过垃圾学院安排一些没啥用的老师上一些没啥用的课确实浪费时间，好久没去听课了，我不理解，为啥自学只需要一两周的课程需要叭叭一个学期，还有这些没啥卵用的实验。中国的教育这种情况真的不考虑改改吗。…（⊙＿⊙；）…</p>
+<h1 id="主体"><a href="#主体" class="headerlink" title="主体"></a>主体</h1><p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/fx-zpy/HUST-DatabaseExperiment">HUST-DatabaseExperiment</a></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>根据任务书里面的六个点我分成了10个功能来实现，后面由于Navicat查看更改刷新费事，就又增加了3个辅助功能，查看三个表的信息。</p>
+<img src="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/dbmenu.png" style="zoom:50%;">
+
+<h2 id="关于jdbc连接mysql"><a href="#关于jdbc连接mysql" class="headerlink" title="关于jdbc连接mysql"></a>关于jdbc连接mysql</h2><blockquote>
+<p>这里我是参考的菜鸟教程：<a target="_blank" rel="noopener" href="https://www.runoob.com/java/java-mysql-connect.html">java Mysql 连接</a></p>
+</blockquote>
+<p>使用的时候需要导入驱动包，对于MySQL的版本在8.0以上的系统，加载驱动和数据库的URL如下</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> JDBC_DRIVER <span class="token operator">=</span> <span class="token string">"com.mysql.cj.jdbc.Driver"</span><span class="token punctuation">;</span>  
+<span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> DB_URL <span class="token operator">=</span> <span class="token string">"jdbc:mysql://localhost:3306/你的数据库名称?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC"</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>如果是在8.0以下，使用如下形式</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> JDBC_DRIVER <span class="token operator">=</span> <span class="token string">"com.mysql.jdbc.Driver"</span><span class="token punctuation">;</span>  
+<span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> DB_URL <span class="token operator">=</span> <span class="token string">"jdbc:mysql://localhost:3306/你的数据库名称"</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>接下来设置用户名和密码</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> USER <span class="token operator">=</span> <span class="token string">"root"</span><span class="token punctuation">;</span><span class="token comment">//这里为mysql注册的时候的用户名，一般都是root</span>
+<span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> PASS <span class="token operator">=</span> <span class="token string">"**********"</span><span class="token punctuation">;</span><span class="token comment">//这里修改为你mysql数据库的密码</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>在代码中使用的时候需要注册jdbc驱动然后连接</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 注册 JDBC 驱动</span>
+<span class="token class-name">Class</span><span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span>JDBC_DRIVER<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//连接</span>
+<span class="token class-name">Connection</span> conn <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+conn <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>DB_URL<span class="token punctuation">,</span>USER<span class="token punctuation">,</span>PASS<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="文件详情"><a href="#文件详情" class="headerlink" title="文件详情"></a>文件详情</h2><p>dbmain.class:主函数实现</p>
+<p>student.class:定义学生类</p>
+<p>mysql_connect.class：连接mysql和其他功能的实现</p>
+<p>mysql数据库：三个表</p>
+<ul>
+<li>student：学生信息表，包含学号，姓名，性别，年龄，院系，是否获得过奖学金</li>
+<li>sc:成绩表,包含学号，课程号，成绩</li>
+<li>course:课程表，包含课程号，课程名称，现行课，学分</li>
+</ul>
+<h2 id="初始化连接数据库"><a href="#初始化连接数据库" class="headerlink" title="初始化连接数据库"></a>初始化连接数据库</h2><p>这里在mysql_connect中将连接定义成方法，在主函数中调用进行连接。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token class-name">MysqlConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">try</span><span class="token punctuation">{</span>
+            <span class="token class-name">Class</span><span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span>JDBC_DRIVER<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            conn <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>DB_URL<span class="token punctuation">,</span>USER<span class="token punctuation">,</span>PASS<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">ClassNotFoundException</span> <span class="token operator">|</span> <span class="token class-name">SQLException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="1号功能"><a href="#1号功能" class="headerlink" title="1号功能"></a>1号功能</h2><p>插入学生信息，基于sql语句：<code>insert into student values(Sno,Sname,Ssex,Sage,Sdept,Scholarship);</code></p>
+<p>需要用户输入相应的信息，由于信息是外输入的，一开始不能写入sql语句中，所以采用？后期来填补参数的方式来进行预处理</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> sql<span class="token operator">=</span><span class="token string">"insert into student values(?,?,?,?,?,?)"</span><span class="token punctuation">;</span><span class="token comment">//sql语句</span>
+<span class="token class-name">PreparedStatement</span> ps<span class="token operator">=</span>conn<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>sql<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//预处理</span>
+ps<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token class-name">Sno</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//插入参数</span>
+ps<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token class-name">Sname</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ps<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token class-name">Ssex</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ps<span class="token punctuation">.</span><span class="token function">setInt</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token class-name">Sage</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ps<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token class-name">Sdept</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ps<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token class-name">Scholarship</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> count<span class="token operator">=</span>ps<span class="token punctuation">.</span><span class="token function">executeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//执行返回更新的数目</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="2号功能"><a href="#2号功能" class="headerlink" title="2号功能"></a>2号功能</h2><p>修改学生数据，这里学号是唯一标识一个学生的数据，所以不提供修改，不过也可以进行修改，只不过比较麻烦，我也不想多写那么多功能了，没有时间啊(ノへ￣、)，基于sql语句:<code>update student set Sname=Sname,Ssex=Ssex,Sage=Sage,Sdept=Sdept,Scholarship=Scholarship where Sno=Sno;</code>这里问问增加了选择，一次只能修改一个数据，避免因为想修改一个数据而需要把全部信息输的麻烦</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"请输入修改的数据序号(1:姓名2:性别3:年龄4:院系5:奖学金)"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="3号功能"><a href="#3号功能" class="headerlink" title="3号功能"></a>3号功能</h2><p>增加课程信息，和1号差不多，基于sql语句:<code>insert into course values(Cno,Cname,Cpno,Ccredit);</code></p>
+<h2 id="4号功能"><a href="#4号功能" class="headerlink" title="4号功能"></a>4号功能</h2><p>修改课程信息，和2号差不多，基于sql语句：<code>update course set Cname=Cname,Cpno=Cpno,Ccredit=Ccredit where Cno=Cno;</code></p>
+<h2 id="5号功能"><a href="#5号功能" class="headerlink" title="5号功能"></a>5号功能</h2><p>删除没有人选课的课程，这里基于sql语句：<code>delete from course where Cno not in (select distinct Cno from sc);</code></p>
+<p>但是执行错误，我检查了一下sql语句发现没错，查看报错信息是外键约束，这是当初建立表的时候设定的，想要删除有两种方法，取消外键和取消外键约束检查，我选择使用后者，在删除执行前禁用约束检查，在删除后再恢复约束检查。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">set</span> FOREIGN_KEY_CHECKS<span class="token operator">=</span><span class="token number">0</span><span class="token comment">//禁用外键约束检查</span>
+<span class="token keyword">set</span> FOREIGN_KEY_CHECKS<span class="token operator">=</span><span class="token number">1</span><span class="token comment">//启用外键约束检查</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="6号功能"><a href="#6号功能" class="headerlink" title="6号功能"></a>6号功能</h2><p>录入学生成绩，基于sql语句：<code>insert into sc values(Sno,Cno,Grade);</code>和1类似</p>
+<h2 id="7号功能"><a href="#7号功能" class="headerlink" title="7号功能"></a>7号功能</h2><p>修改学生成绩，基于sql语句:<code>update sc set Grade=Grade where Sno=Sno and Cno=Cno;</code>和2类似</p>
+<h2 id="8号功能"><a href="#8号功能" class="headerlink" title="8号功能"></a>8号功能</h2><p>按照院系统计学生的成绩，包含最高分，最低分，平均分，优秀率和不及格人数，这里最高分，最低分和平均分可以通过sql语句<code>select Sdept, avg(Grade) avgGrade, max(Grade) maxGrade, min(Grade) minGrade from (select Sdept, Grade from Student, SC where Student.Sno = SC.Sno) as deptGrade(Sdept, Grade) group by Sdept</code>来查询，后面优秀率是通过查询总人数<code>select count(*) as count from sc, student where student.Sdept = ? and student.Sno = sc.Sno</code>和优秀人数<code>select count(*) as count  from sc, student where student.Sdept = ? and student.Sno = sc.Sno and sc.Grade &gt;= 80</code>，两者相除得到的，而不及格人数可以直接利用sql语句查询获取<code>select count(*) as count  from sc, student where student.Sdept = ? and student.Sno = sc.Sno and sc.Grade &lt;= 60</code></p>
+<h2 id="9号功能"><a href="#9号功能" class="headerlink" title="9号功能"></a>9号功能</h2><p>按系进行排名，同时显示出学生、课程和成绩信息，这里首先需要建立一个学生类的列表，在获取数据循环中将每个学生的信息加入进去，然后利用Collections.sort进行排序重写方法使用Lambda表达式直接简化</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Collections</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>stu<span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">(</span>o1<span class="token punctuation">,</span> o2<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>o2<span class="token punctuation">.</span><span class="token function">getGrade</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span>o1<span class="token punctuation">.</span><span class="token function">getGrade</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<img src="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/db9hao.png" style="zoom:50%;">
+
+<h2 id="10号功能"><a href="#10号功能" class="headerlink" title="10号功能"></a>10号功能</h2><p>由学号得信息，这里输入学号之后基于学号去student,sc,course表中查询信息就行了</p>
+<img src="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/db10.png" style="zoom:50%;">
+
+<h2 id="11、12、13号功能"><a href="#11、12、13号功能" class="headerlink" title="11、12、13号功能"></a>11、12、13号功能</h2><p>查看表信息，比较简单，直接使用sql语句：<code>select * from student\sc\course;</code>即可</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>其实如果有时间我确实想好好做一个数据库管理系统，大体功能都想好了，交互式逼格拉满的界面的大体规划也已经完成，诶，还是等CSP考完吧，接下来狂刷算法题ε(┬┬﹏┬┬)3，希望人没事。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">fx-zpy</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://fx-zpy.github.io/posts/fc319166.html">http://fx-zpy.github.io/posts/fc319166.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">fx-zpy</a>
+                    !
+                </span>
             </div>
         
     </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%AE%9E%E9%AA%8C/">
+                                    <span class="chip bg-color">实验</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo,twitter,facebook,google,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
 </div>
-<main>
-<script src=""></script>
-<script src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-<script src="https://cdn.staticfile.org/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js"></script>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/null") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    .v[data-class="v"] .vwrap .vheader .vinput {
+      width: 32%;
+      border-bottom: 1px dashed #dedede;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+let metaPlaceholder = {"nick":"昵称/QQ号(必填)","mail":"邮箱(必填)","link":"网址(https://)"} ;
+//这里要换行
+new Valine({
+        el: '#vcomments',
+        appId: 'SRXSC16zf20HIuCisNyhziIN-gzGzoHsz',
+        appKey: 'M1iObX56IBl39dN4TVTDFQ4l',
+        notify: 'true' === 'true',
+        verify: 'true' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '10',
+        lang: 'zh-CN',
+        placeholder: '有什么想说的都可以留言..',
+        meta: ["nick", "mail", "link"],
+        recordIP: 'true' === 'true',
+        enableQQ: 'monsterid',
+        requiredFields: ["f3bc23e0905114ab82f649ced2a7fe0f"],
+        master: ["f3bc23e0905114ab82f649ced2a7fe0f"],
+        friends: ["f3bc23e0905114ab82f649ced2a7fe0f", ""],
+        tagMeta: ["博主", "小伙伴", "访客"],
+        metaPlaceholder: metaPlaceholder,
+
+    });
+
+    document.body.addEventListener('click', function(e) {
+        if (e.target.classList.contains('vsubmit')) {
+            const email = document.querySelector('input[type=email]');
+            const nick = document.querySelector('input[name=nick]');
+            const reg = /^[A-Za-z0-9_-\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+            if (!email.value || !nick.value || !reg.test(email.value)) {
+                const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+                const vmark = document.querySelector('.vmark');
+                vmark.innerHTML = str;
+                vmark.style.display = 'block';
+
+                e.stopPropagation();
+
+                setTimeout(function() {
+                    vmark.style.display = 'none';
+                    vmark.innerHTML = '';
+                }, 2500);
+            }
+        }
+        }, true);
+</script>
+
+
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/fc319166.html">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/blog/14.jpg" class="responsive-img" alt="简易数据库管理系统">
+                        
+                        <span class="card-title">简易数据库管理系统</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            数据库实验4要求设计一个学生数据库管理系统，我用java写了一个命令行的系统
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                    后端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AE%9E%E9%AA%8C/">
+                        <span class="chip bg-color">实验</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/bbf4e5b.html">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/blog/13.jpg" class="responsive-img" alt="c++知识总结">
+                        
+                        <span class="card-title">c++知识总结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            兴起开始刷算法，但是感觉用C不太方便，于是准备转C++了，不过因为有C和面向编程的基础，学会一点C++对付算法CSP应该够用了
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="post-category">
+                                    编程语言
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/">
+                        <span class="chip bg-color">知识体系</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
 
 <script>
-  // $(".waterfall").lazyload();
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
 
-$("a[rel=example_group]").fancybox();
-//  不加密写法
-// $("#mygallery").justifiedGallery({margins: 5, rowHeight: 150});
-$("#encrypt-blog").justifiedGallery({margins: 5, rowHeight: 150});
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('1')) {
+            return;
+        }
 
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 无言<br />'
+            + '文章作者: fx-zpy<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
 </script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1,h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1,h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
 
 
                             <footer class="page-footer bg-color">

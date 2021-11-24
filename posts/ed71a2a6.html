@@ -619,21 +619,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-11
+                    2021-11-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -651,7 +651,128 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="四、网络层"><a href="#四、网络层" class="headerlink" title="四、网络层"></a>四、网络层</h1><h2 id="数据平面"><a href="#数据平面" class="headerlink" title="数据平面"></a>数据平面</h2>
+                <h1 id="四、网络层"><a href="#四、网络层" class="headerlink" title="四、网络层"></a>四、网络层</h1><blockquote>
+<p>网络层是主机和主机之间的交互，本部分的内容比较繁杂，计算也较多需要细心消化</p>
+</blockquote>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>实现主机之间的通信</p>
+<h3 id="地位"><a href="#地位" class="headerlink" title="地位"></a>地位</h3><ol>
+<li>为运输层提供支持</li>
+<li>每一台分组交换机均需要实现网络层</li>
+</ol>
+<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><ol>
+<li>控制层面：在全局范畴内为主机之间进行选路，选路的结果反映为分组交换机的转发表</li>
+<li>数据层面：分组交换机上的网络层根据转发表以及分组头部信息将分组向适当链路进行转发</li>
+</ol>
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ol>
+<li>分组交换机<ul>
+<li>链路层节点交换机：根据链路层首部进行转发</li>
+<li>路由器：根据网络层首部进行转发</li>
+</ul>
+</li>
+</ol>
+<h3 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h3><ul>
+<li>确保支付</li>
+<li>具有时延上界的确保支付</li>
+<li>有序分组交付</li>
+<li>确保最小带宽</li>
+<li>确保最大时延抖动</li>
+<li>安全性服务</li>
+</ul>
+<h2 id="虚电路和数据报网络"><a href="#虚电路和数据报网络" class="headerlink" title="虚电路和数据报网络"></a>虚电路和数据报网络</h2><h3 id="虚电路"><a href="#虚电路" class="headerlink" title="虚电路"></a>虚电路</h3><ul>
+<li>面向连接的服务，需要事先进行握手</li>
+<li>目标：使得收发双发之间的路径表现的如同电话线路一般</li>
+<li>工作机制<ol>
+<li>数据开始流动前，呼叫建立，流动结束之后断开</li>
+<li>每一个分组携带虚电路的标识</li>
+<li>路径中的每一个路由器必须为进行中的连接维持连接状态</li>
+<li>链路路由器资源（带宽、缓冲区）可以分配给虚电路，为了达到类似线路交换的性能</li>
+</ol>
+</li>
+<li>组成<ul>
+<li>从源到目的主机的路径：一系列链路和路由器</li>
+<li>VC号，沿着该路径的每段链路的一个号码<ul>
+<li>一条虚电路在每一条链路上具有不同的VC号</li>
+<li>每台中间路由器都必须用一个新的VC号来替代每个传输分组的VC号</li>
+</ul>
+</li>
+<li>沿着该路径的每台路由器的转发表<ul>
+<li>创建一个新的虚电路之后，转发表需要增加一个新表项</li>
+<li>终止一条虚电路之后，表中相应的项被删除</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="数据报网络"><a href="#数据报网络" class="headerlink" title="数据报网络"></a>数据报网络</h3><ul>
+<li>面向无连接的服务</li>
+<li>路由器在端到端的连接中不维护状态信息</li>
+<li>传输报文的时候使用目的主机信息</li>
+</ul>
+<h2 id="路由器的工作原理"><a href="#路由器的工作原理" class="headerlink" title="路由器的工作原理"></a>路由器的工作原理</h2><blockquote>
+<p>路由器主要是路由选择和分组转发，路由选择涉及到路由算法和协议</p>
+</blockquote>
+<img src="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/ly.png" style="zoom:50%;">
+
+<ul>
+<li><p>输入端口的交换</p>
+<ul>
+<li><p>分散式交换：按照给出的目的地址，使用输入端口的内存中存储的路由表，查找输出端口</p>
+<ul>
+<li><p>目标：以“线路速度”完成输入端口的处理</p>
+</li>
+<li><p>排队：如果数据报到达的速度超过了输入端口将数据报转交给交换结构的速度，则后到的分组会暂时阻塞</p>
+<blockquote>
+<p>输入缓冲区溢出也可以导致排队时延和丢包</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>经过内存交换</p>
+<ul>
+<li>输入端口和输出端口之间的交换实在CPU（路由处理器）的直接控制下完成的</li>
+<li>分组被拷贝到系统内存中，CPU提出报头中的目标地址，查找路由表中的输出接口，将数据包拷贝到输出接口</li>
+<li>转发速度受限于内存的带宽</li>
+<li>一次转发一个分组</li>
+</ul>
+</li>
+<li><p>经过内联网络</p>
+<ul>
+<li>克服总线带宽的限制</li>
+</ul>
+</li>
+<li><p>经过总线交换</p>
+<ul>
+<li>输入端口通过一根共享总线将分组直接传送到输出端口</li>
+<li>交换速度受限于总线的宽度</li>
+<li>一次一个分组</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>输出端口的交换</p>
+</li>
+</ul>
+<h2 id="网际协议：因特网中的转发和编址"><a href="#网际协议：因特网中的转发和编址" class="headerlink" title="网际协议：因特网中的转发和编址"></a>网际协议：因特网中的转发和编址</h2><h3 id="IP协议"><a href="#IP协议" class="headerlink" title="IP协议"></a>IP协议</h3><ul>
+<li><p>IP数据报的格式</p>
+<img src="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/ip.png" style="zoom: 50%;">
+</li>
+<li><p>IP分片和重组</p>
+<p>大的数据报变成了几个小的数据报，在目的主机处进行重组，重组的根据是数据报头部的标识、标志和片偏移字段</p>
+<img src="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/ipfz.png" style="zoom:50%;">
+</li>
+<li><p>IP地址：32位的主机或者路由器的接口标志符，高位网络号（子网号），低位主机号</p>
+</li>
+<li><p>接口：连接主机、路由器之间的物理链路</p>
+<blockquote>
+<p>一般来说，路由器有多个接口，主机也有可能有多个接口，IP地址只和接口有关，而与主机、路由器却没有太多关联</p>
+</blockquote>
+</li>
+<li><p>IP地址的分类</p>
+<img src="https://cdn.jsdelivr.net/gh/fx-zpy/PictureBed@main/img/ipfl.png" style="zoom:50%;">
+</li>
+<li></li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -1399,7 +1520,7 @@ new Valine({
                                     <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
                                     <br>
                                     
-                                        &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">30.8k</span>&nbsp;字
+                                        &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">33.4k</span>&nbsp;字
                                         
                                             
                                                 
