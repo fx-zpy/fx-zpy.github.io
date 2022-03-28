@@ -67,9 +67,9 @@
     <category term="工作准备" scheme="http://fx-zpy.github.io/categories/%E5%90%8E%E7%AB%AF/%E5%B7%A5%E4%BD%9C%E5%87%86%E5%A4%87/"/>
     
     
-    <category term="Java" scheme="http://fx-zpy.github.io/tags/Java/"/>
-    
     <category term="database" scheme="http://fx-zpy.github.io/tags/database/"/>
+    
+    <category term="Java" scheme="http://fx-zpy.github.io/tags/Java/"/>
     
   </entry>
   
@@ -120,9 +120,9 @@
     <category term="编程语言" scheme="http://fx-zpy.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-    <category term="C++" scheme="http://fx-zpy.github.io/tags/C/"/>
-    
     <category term="知识体系" scheme="http://fx-zpy.github.io/tags/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
+    
+    <category term="C++" scheme="http://fx-zpy.github.io/tags/C/"/>
     
   </entry>
   
@@ -150,9 +150,9 @@
     <category term="数据库" scheme="http://fx-zpy.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-    <category term="知识体系" scheme="http://fx-zpy.github.io/tags/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
-    
     <category term="database" scheme="http://fx-zpy.github.io/tags/database/"/>
+    
+    <category term="知识体系" scheme="http://fx-zpy.github.io/tags/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
     
   </entry>
   
