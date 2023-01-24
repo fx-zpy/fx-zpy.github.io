@@ -148,9 +148,9 @@
     <category term="工作准备" scheme="http://fx-zpy.github.io/categories/%E5%90%8E%E7%AB%AF/%E5%B7%A5%E4%BD%9C%E5%87%86%E5%A4%87/"/>
     
     
-    <category term="database" scheme="http://fx-zpy.github.io/tags/database/"/>
-    
     <category term="Java" scheme="http://fx-zpy.github.io/tags/Java/"/>
+    
+    <category term="database" scheme="http://fx-zpy.github.io/tags/database/"/>
     
   </entry>
   
